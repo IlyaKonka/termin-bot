@@ -43,7 +43,7 @@ public class ChromeBrowser {
         WebDriverManager.chromedriver().setup();
 
         service = new ChromeDriverService.Builder()
-                .usingPort(Integer.valueOf(port))
+                .usingPort(Integer.parseInt(port))
                 .build();
         service.start();
 

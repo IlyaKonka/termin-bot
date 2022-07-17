@@ -19,6 +19,8 @@ import java.util.Properties;
 @Slf4j
 public class TelegramBot implements Runnable {
 
+    private static final String DEFAULT_PORT = "48331";
+
     private static String BOT_TOKEN;
     private static String TERMIN_URL;
     private static List<String> USERS = new ArrayList<>();
@@ -54,6 +56,7 @@ public class TelegramBot implements Runnable {
         });
 
         for (; ; ) {
+
             try {
                 log.info("START CHECK TERMIN");
                 boolean sendInfo = checkFreeTermin();
@@ -133,7 +136,7 @@ public class TelegramBot implements Runnable {
             throw e;
         }
 
-        log.info("THIS BOT IS FOR:"+globalProps.getProperty("NAME"));
+        log.info("THIS BOT IS FOR:" + globalProps.getProperty("NAME"));
 
         BOT_TOKEN = globalProps.getProperty("BOT_TOKEN");
         TERMIN_URL = globalProps.getProperty("TERMIN_URL");
@@ -141,9 +144,19 @@ public class TelegramBot implements Runnable {
         Arrays.asList(globalProps.getProperty("CHAT_IDS").split(","))
                 .forEach(k -> CHAT_IDS.add(Long.valueOf(k)));
 
+        String currentPort = DEFAULT_PORT;
+        try {
+            Integer.parseInt(args[0]);
+            currentPort = (args[0]);
+        } catch (Exception e) {
+            log.info("Using default port [{}]", DEFAULT_PORT);
+        }
 
-        Thread telegramTest = new Thread(new TelegramBot(args[0]));
-        telegramTest.start();
+        //Thread telegramTest = new Thread(new TelegramBot(currentPort));
+        //telegramTest.start();
+
+        TelegramBot telegramBot = new TelegramBot(currentPort);
+        telegramBot.run();
     }
 
 }
