@@ -6,12 +6,12 @@
         </encoder>
     </appender>
 
-    <logger name="browser" level="DEBUG" />
-    <logger name="org" level="INFO" />
-    <logger name="com" level="INFO" />
+    <logger name="driver" level="INFO"/>
+    <logger name="org" level="INFO"/>
+    <logger name="com" level="INFO"/>
 
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDOUT"/>
     </root>
 
 </configuration>
