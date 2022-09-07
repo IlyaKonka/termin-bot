@@ -3,7 +3,7 @@
 Termin (eng. appointment) is essential in Germany, especially in Berlin.
 Sometimes it is tough to get a termin in public institutions and
 this bot is a way to automate termin check and
-send [Telegram](https://en.wikipedia.org/wiki/Telegram_(software)) notification, if free
+send [Telegram](https://telegram.org/) notification, if free
 termin was found.
 The code could be also considered as a template for subsequent development.
 ## Getting Started
