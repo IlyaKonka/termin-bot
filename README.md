@@ -78,7 +78,10 @@ version of jar file.
 
 - By default, for docker image is used the properties from _src/main/resources/global.properties_. If you want to change 
   it, edit _src/main/docker/Dockerfile_
-  
+
+- Hardcode **CHAT_IDS** in properties file or use [Docker volumes](https://docs.docker.com/storage/volumes/).
+After container restart all editions of properties file will be deleted.
+
 ### Deploy on Heroku
 If you want to host this bot, you can use [Heroku](https://heroku.com).
 It is easy to host Docker containers there. You need only _heroku.yml_.

@@ -7,7 +7,7 @@ COPY src/main/docker/loop.sh loop.sh
 
 USER root
  
-RUN chmod +x loop.sh
+RUN chmod +x loop.sh && chown seluser global.properties
 
 USER seluser
 
