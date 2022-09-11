@@ -57,7 +57,7 @@ released version.
 
 To start the bot, run **jar** file with a path to the properties file as an argument.
 ```
-java -jar chrome-bot-1.0-jar-with-dependencies.jar <path_to_properties_file>
+java -jar termin-bot-1.0-jar-with-dependencies.jar <path_to_properties_file>
 ```
 
 If you start the program without an argument, the default path to properties is _src/main/resources/global.properties_.
@@ -67,8 +67,8 @@ You could also run the bot in [Docker](https://www.docker.com/) container.
 Go to the root folder of the project and run the following commands:
 
 ```
-docker build ...
-docker run ...
+docker build -t my-termin-bot -f src/main/docker/Dockerfile .
+docker run --name termin-bot-container my-termin-bot
 ```
 
 **Important:** 

@@ -1,7 +1,7 @@
 FROM selenium/standalone-chrome:4.3.0-20220706
 
 
-COPY target/chrome-bot-1.0-jar-with-dependencies.jar chrome-bot-1.0-jar-with-dependencies.jar
+COPY target/termin-bot-1.0-jar-with-dependencies.jar termin-bot-1.0-jar-with-dependencies.jar
 COPY src/main/resources/global.properties global.properties
 COPY src/main/docker/loop.sh loop.sh
 
