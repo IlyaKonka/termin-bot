@@ -1,3 +1,5 @@
+# UPDATE:
+NO LONGER WORKS DUE TO BOT DETECTION. COULD BE USED AS A TEMPLATE FOR OTHER RESOURCES.
 # Termin-Bot
 ## Idea
 Termin (eng. appointment) is essential in Germany, especially in Berlin.
